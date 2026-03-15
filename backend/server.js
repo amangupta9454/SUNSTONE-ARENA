@@ -4,7 +4,7 @@ require('express-async-errors');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+const connectDB = require('./lib/mongodb');
 
 // Import all route files
 const authRoutes = require('./routes/authRoutes');
@@ -27,13 +27,45 @@ const intelligenceRoutes = require('./routes/intelligenceRoutes');
 
 const app = express();
 
+// ─── Allowed Origins ──────────────────────────────────────────────────────────
+// Add every origin that should be allowed to call this API.
+// FRONTEND_URL in .env must include the protocol (https://...).
+const ALLOWED_ORIGINS = [
+  process.env.FRONTEND_URL,          // e.g. https://edupath-ai.netlify.app
+  'https://edupath-ai.netlify.app',            // Vite dev server
+  'https://edupath-ai.netlify.app',            // CRA / other local dev
+].filter(Boolean);                   // drop undefined if env var is missing
+
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors({
-  origin: process.env.FRONTEND_URL || '*',
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (curl, Postman, server-to-server)
+      if (!origin) return callback(null, true);
+      if (ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
+      callback(new Error(`CORS: origin ${origin} not allowed`));
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
-app.use(morgan('dev')); // logs every request to console: GET /api/auth/login 200 12ms
+
+// Use 'combined' in production — 'dev' is too noisy for serverless logs
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
+
+// ─── DB connection middleware ─────────────────────────────────────────────────
+// Runs before every request so the connection is always ready.
+// connectDB() is idempotent — it reuses the cached connection if available.
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error('❌ DB connection failed:', err.message);
+    res.status(503).json({ success: false, message: 'Database unavailable.' });
+  }
+});
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
 app.use('/api/auth', authRoutes);
@@ -59,8 +91,12 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'edupath-backend', timestamp: new Date() });
 });
 
+// ─── 404 Handler ──────────────────────────────────────────────────────────────
+app.use((req, res) => {
+  res.status(404).json({ success: false, message: 'Endpoint not found' });
+});
+
 // ─── Global Error Handler ─────────────────────────────────────────────────────
-// This catches any error thrown anywhere in the app (thanks to express-async-errors)
 app.use((err, req, res, next) => {
   console.error('❌ Global Error:', err.message);
   const statusCode = err.statusCode || 500;
@@ -70,23 +106,23 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.use((req, res) => {
-  console.log("API IS RUNNING");
-  res.status(404).json({ success: false, message: 'Endpoint not found' });
-}
-);
-// ─── Database + Server Start ──────────────────────────────────────────────────
-const PORT = process.env.PORT || 5000;
-
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('✅ MongoDB connected successfully');
-    app.listen(PORT, () => {
-      console.log(`🚀 Backend server running on http://localhost:${PORT}`);
+// ─── Local Dev Server ─────────────────────────────────────────────────────────
+// On Vercel this block is never reached — Vercel imports the exported `app`
+// directly as a serverless handler. Locally, this starts the Express server.
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`🚀 Backend running on http://localhost:${PORT}`);
+      });
+    })
+    .catch((err) => {
+      console.error('❌ MongoDB connection failed:', err.message);
+      process.exit(1);
     });
-  })
-  .catch((err) => {
-    console.error('❌ MongoDB connection failed:', err.message);
-    process.exit(1);
-  });
+}
+app.get('/', (req, res) => res.send('EduPath API is running'));
+
+// Export the app for Vercel (and any other serverless runtime)
+module.exports = app;
