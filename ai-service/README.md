@@ -17,55 +17,7 @@
 <!-- AI Service Architecture SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🏗️ Service Architecture</h2>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 260" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
-  <defs>
-    <marker id="aia" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#d2a8ff"/>
-    </marker>
-    <marker id="aig" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
-    </marker>
-  </defs>
-  <text x="410" y="22" text-anchor="middle" fill="#d2a8ff" font-size="13" font-family="monospace" font-weight="bold">Python AI Service — Internal Architecture</text>
-  <!-- Incoming -->
-  <rect x="20" y="50" width="100" height="40" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="70" y="74" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Node.js :5000</text>
-  <line x1="120" y1="70" x2="155" y2="70" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#aia)"/>
-  <!-- FastAPI -->
-  <rect x="155" y="36" width="120" height="68" rx="6" fill="#161b22" stroke="#d2a8ff" stroke-width="2"/>
-  <text x="215" y="58" text-anchor="middle" fill="#d2a8ff" font-size="11" font-family="monospace" font-weight="bold">FastAPI</text>
-  <text x="215" y="74" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Uvicorn ASGI</text>
-  <text x="215" y="88" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Pydantic validation</text>
-  <!-- Routers -->
-  <line x1="275" y1="70" x2="310" y2="70" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#aia)"/>
-  <rect x="310" y="36" width="130" height="68" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
-  <text x="375" y="56" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="bold">Routers</text>
-  <text x="375" y="72" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">/mastery/update</text>
-  <text x="375" y="86" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">/recommend  /tutor</text>
-  <text x="375" y="100" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">/plan  /intelligence</text>
-  <!-- Core -->
-  <line x1="440" y1="70" x2="475" y2="70" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#aia)"/>
-  <rect x="475" y="36" width="140" height="68" rx="6" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
-  <text x="545" y="56" text-anchor="middle" fill="#d2a8ff" font-size="10" font-family="monospace" font-weight="bold">Core Algorithms</text>
-  <text x="545" y="72" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">bkt_model.py</text>
-  <text x="545" y="86" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">knowledge_graph.py</text>
-  <text x="545" y="100" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">plan_generator.py</text>
-  <!-- External -->
-  <line x1="615" y1="70" x2="650" y2="70" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#aia)"/>
-  <rect x="650" y="50" width="150" height="40" rx="6" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
-  <text x="725" y="68" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">MongoDB Atlas</text>
-  <text x="725" y="82" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">PyMongo driver</text>
-  <!-- Gemini branch -->
-  <line x1="545" y1="104" x2="545" y2="140" stroke="#f85149" stroke-width="1.5" marker-end="url(#aia)"/>
-  <rect x="455" y="140" width="180" height="40" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
-  <text x="545" y="158" text-anchor="middle" fill="#f85149" font-size="10" font-family="monospace">Google Gemini Pro</text>
-  <text x="545" y="172" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Streaming SSE responses</text>
-  <!-- Services box -->
-  <rect x="155" y="190" width="280" height="56" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="295" y="208" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace" font-weight="bold">Supporting Services</text>
-  <text x="295" y="224" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">predictive_model.py · question_generator.py</text>
-  <text x="295" y="238" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">learning_style_model.py</text>
-</svg>
+![ai-service-README diagram](../assets/ai-service-README.svg)
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

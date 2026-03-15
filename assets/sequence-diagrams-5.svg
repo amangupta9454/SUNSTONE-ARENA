@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="s5a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="s5g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="s5o" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffa657"/>
+    </marker>
+  </defs>
+  <text x="410" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">Sequence 5 — SRS Card Review</text>
+  <rect x="30" y="36" width="80" height="28" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="70" y="55" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Student</text>
+  <rect x="200" y="36" width="100" height="28" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="250" y="55" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">React Frontend</text>
+  <rect x="400" y="36" width="120" height="28" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="460" y="55" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Node.js :5000</text>
+  <rect x="620" y="36" width="120" height="28" rx="4" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="680" y="55" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">MongoDB Atlas</text>
+  <line x1="70" y1="64" x2="70" y2="270" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="250" y1="64" x2="250" y2="270" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="460" y1="64" x2="460" y2="270" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="680" y1="64" x2="680" y2="270" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="70" y1="85" x2="240" y2="85" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="155" y="80" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">Open SRS Review</text>
+  <line x1="250" y1="105" x2="450" y2="105" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="350" y="100" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">GET /api/srs/due + JWT</text>
+  <line x1="460" y1="125" x2="670" y2="125" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="565" y="120" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">SRSCard.find({ nextReview &lt;= today })</text>
+  <line x1="670" y1="145" x2="470" y2="145" stroke="#ffa657" stroke-width="1.5" marker-end="url(#s5o)"/>
+  <text x="565" y="140" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">Due cards array</text>
+  <line x1="450" y1="165" x2="260" y2="165" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5g)"/>
+  <text x="350" y="160" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">200 { cards[] }</text>
+  <line x1="240" y1="185" x2="80" y2="185" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="160" y="180" text-anchor="middle" fill="#c9d1d9" font-size="9" font-family="monospace">Show card front</text>
+  <!-- Loop -->
+  <rect x="10" y="193" width="760" height="50" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="20" y="207" fill="#8b949e" font-size="8" font-family="monospace">loop: for each due card</text>
+  <line x1="70" y1="215" x2="240" y2="215" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="155" y="210" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">Flip + rate recall (0–5)</text>
+  <line x1="250" y1="225" x2="450" y2="225" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="350" y="220" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">POST /api/srs/review { cardId, rating }</text>
+  <line x1="460" y1="235" x2="670" y2="235" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5a)"/>
+  <text x="565" y="230" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">SM-2: update interval + nextReview</text>
+  <line x1="450" y1="255" x2="260" y2="255" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s5g)"/>
+  <text x="350" y="250" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">200 { nextReview } → next card</text>
+</svg>

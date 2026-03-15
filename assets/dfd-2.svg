@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" style="width:100%;max-width:860px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="d1a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="d1g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="d1o" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffa657"/>
+    </marker>
+  </defs>
+  <text x="430" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">Level 1 — Major System Processes</text>
+  <!-- Actors -->
+  <ellipse cx="60" cy="200" rx="48" ry="28" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="60" y="196" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">👤 Student</text>
+  <text x="60" y="210" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Learner</text>
+  <ellipse cx="60" cy="340" rx="48" ry="28" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="60" y="336" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">👩‍🏫 Teacher</text>
+  <text x="60" y="350" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Instructor</text>
+  <!-- DB -->
+  <rect x="370" y="340" width="120" height="44" rx="5" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="430" y="358" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">🍃 MongoDB</text>
+  <text x="430" y="374" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Atlas</text>
+  <!-- Gemini -->
+  <ellipse cx="800" cy="200" rx="50" ry="28" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="800" y="196" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">🤖 Gemini</text>
+  <text x="800" y="210" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Pro</text>
+  <!-- Process boxes -->
+  <rect x="150" y="40" width="110" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="205" y="60" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="bold">1.0 Auth</text>
+  <text x="205" y="76" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">User Mgmt</text>
+  <rect x="290" y="40" width="110" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="345" y="60" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="bold">2.0 Assess</text>
+  <text x="345" y="76" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">BKT Engine</text>
+  <rect x="430" y="40" width="110" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="485" y="60" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace" font-weight="bold">3.0 Learn</text>
+  <text x="485" y="76" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Content</text>
+  <rect x="570" y="40" width="110" height="50" rx="5" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+  <text x="625" y="60" text-anchor="middle" fill="#d2a8ff" font-size="10" font-family="monospace" font-weight="bold">4.0 AI Intel</text>
+  <text x="625" y="76" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Widgets</text>
+  <rect x="150" y="200" width="110" height="50" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="205" y="220" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace" font-weight="bold">5.0 Gamify</text>
+  <text x="205" y="236" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">XP + Progress</text>
+  <rect x="290" y="200" width="110" height="50" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="345" y="220" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace" font-weight="bold">6.0 Teacher</text>
+  <text x="345" y="236" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Dashboard</text>
+  <!-- Student → processes -->
+  <line x1="108" y1="185" x2="148" y2="75" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <line x1="108" y1="195" x2="288" y2="75" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <line x1="108" y1="200" x2="428" y2="75" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <line x1="108" y1="205" x2="568" y2="75" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <line x1="108" y1="210" x2="148" y2="215" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <!-- Teacher → P6 -->
+  <line x1="108" y1="330" x2="288" y2="240" stroke="#3fb950" stroke-width="1.5" marker-end="url(#d1g)"/>
+  <!-- P4 → Gemini -->
+  <line x1="680" y1="65" x2="748" y2="185" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#d1a)"/>
+  <text x="720" y="130" fill="#d2a8ff" font-size="9" font-family="monospace">prompt</text>
+  <!-- Processes → DB -->
+  <line x1="205" y1="90" x2="390" y2="338" stroke="#ffa657" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#d1o)"/>
+  <line x1="345" y1="90" x2="410" y2="338" stroke="#ffa657" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#d1o)"/>
+  <line x1="485" y1="90" x2="430" y2="338" stroke="#ffa657" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#d1o)"/>
+  <line x1="205" y1="250" x2="390" y2="355" stroke="#ffa657" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#d1o)"/>
+  <line x1="345" y1="250" x2="410" y2="355" stroke="#ffa657" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#d1o)"/>
+</svg>

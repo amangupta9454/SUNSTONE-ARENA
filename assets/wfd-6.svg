@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="w6a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="w6g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="w6r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f85149"/>
+    </marker>
+  </defs>
+  <text x="410" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">SRS Review Workflow (SM-2 Algorithm)</text>
+  <!-- Start -->
+  <rect x="20" y="50" width="130" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="85" y="68" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Open SRS Review</text>
+  <text x="85" y="80" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">GET /api/srs/due</text>
+  <line x1="150" y1="68" x2="188" y2="68" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w6a)"/>
+  <!-- Cards available? -->
+  <polygon points="230,50 280,68 230,86 180,68" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="230" y="64" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">Cards</text>
+  <text x="230" y="78" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">due?</text>
+  <!-- No cards -->
+  <line x1="230" y1="86" x2="230" y2="120" stroke="#8b949e" stroke-width="1.5" marker-end="url(#w6a)"/>
+  <text x="242" y="108" fill="#8b949e" font-size="9" font-family="monospace">No</text>
+  <rect x="170" y="122" width="120" height="30" rx="5" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="230" y="141" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">All caught up!</text>
+  <!-- Yes → show card -->
+  <line x1="280" y1="68" x2="338" y2="68" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w6g)"/>
+  <text x="308" y="63" fill="#3fb950" font-size="9" font-family="monospace">Yes</text>
+  <rect x="340" y="50" width="130" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="405" y="68" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Show Card Front</text>
+  <text x="405" y="80" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Student recalls</text>
+  <line x1="470" y1="68" x2="508" y2="68" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w6g)"/>
+  <rect x="510" y="50" width="130" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="575" y="68" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Flip Card</text>
+  <text x="575" y="80" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Rate recall 0–5</text>
+  <line x1="640" y1="68" x2="678" y2="68" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w6g)"/>
+  <!-- Rating decision -->
+  <polygon points="720,50 770,68 720,86 670,68" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="720" y="64" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">Rating</text>
+  <text x="720" y="78" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">&gt;= 3?</text>
+  <!-- Pass path -->
+  <line x1="720" y1="86" x2="720" y2="140" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w6g)"/>
+  <text x="732" y="118" fill="#3fb950" font-size="9" font-family="monospace">Yes</text>
+  <rect x="640" y="142" width="160" height="44" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="720" y="160" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">SM-2: Increment</text>
+  <text x="720" y="174" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">interval × easiness</text>
+  <text x="720" y="186" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">EF adjusted</text>
+  <!-- Fail path -->
+  <line x1="770" y1="68" x2="800" y2="68" stroke="#f85149" stroke-width="1.5"/>
+  <line x1="800" y1="68" x2="800" y2="180" stroke="#f85149" stroke-width="1.5"/>
+  <line x1="800" y1="180" x2="762" y2="180" stroke="#f85149" stroke-width="1.5" marker-end="url(#w6r)"/>
+  <text x="808" y="130" fill="#f85149" font-size="9" font-family="monospace">No</text>
+  <text x="808" y="145" fill="#f85149" font-size="9" font-family="monospace">Reset</text>
+  <text x="808" y="160" fill="#f85149" font-size="9" font-family="monospace">interval=1</text>
+  <!-- Both → save -->
+  <line x1="720" y1="186" x2="575" y2="230" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w6g)"/>
+  <rect x="460" y="232" width="230" height="36" rx="5" fill="#1a3a2a" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="575" y="250" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">nextReview = today + interval</text>
+  <text x="575" y="262" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Save SRSCard to MongoDB</text>
+  <!-- Loop back -->
+  <line x1="460" y1="250" x2="405" y2="250" stroke="#58a6ff" stroke-width="1.5"/>
+  <line x1="405" y1="250" x2="405" y2="86" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w6a)"/>
+  <text x="390" y="170" fill="#58a6ff" font-size="9" font-family="monospace">next card</text>
+</svg>

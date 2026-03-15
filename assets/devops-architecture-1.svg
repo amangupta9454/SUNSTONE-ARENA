@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" style="width:100%;max-width:860px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="da" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="dg" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="do" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffa657"/>
+    </marker>
+  </defs>
+  <text x="430" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">EduPath AI — Infrastructure Overview</text>
+  <!-- Developer -->
+  <rect x="20" y="40" width="110" height="50" rx="5" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="75" y="62" text-anchor="middle" fill="#8b949e" font-size="11" font-family="monospace">👨‍💻 Developer</text>
+  <text x="75" y="80" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">git push</text>
+  <!-- GitHub -->
+  <rect x="170" y="40" width="160" height="50" rx="5" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+  <text x="250" y="62" text-anchor="middle" fill="#d2a8ff" font-size="11" font-family="monospace" font-weight="bold">📦 GitHub</text>
+  <text x="250" y="80" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Repo + Actions CI/CD</text>
+  <line x1="130" y1="65" x2="168" y2="65" stroke="#8b949e" stroke-width="1.5" marker-end="url(#da)"/>
+  <!-- CDN -->
+  <rect x="380" y="40" width="160" height="50" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="460" y="62" text-anchor="middle" fill="#58a6ff" font-size="11" font-family="monospace" font-weight="bold">🌐 CDN</text>
+  <text x="460" y="80" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Vercel / Netlify</text>
+  <line x1="330" y1="55" x2="378" y2="55" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#da)"/>
+  <text x="354" y="50" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">deploy</text>
+  <!-- Render -->
+  <rect x="380" y="130" width="160" height="80" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="460" y="152" text-anchor="middle" fill="#3fb950" font-size="11" font-family="monospace" font-weight="bold">☁️ Render.com</text>
+  <text x="460" y="170" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Node.js :5000</text>
+  <text x="460" y="186" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Python FastAPI :8000</text>
+  <text x="460" y="202" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">512MB RAM | 0.5 CPU each</text>
+  <line x1="330" y1="75" x2="378" y2="145" stroke="#3fb950" stroke-width="1.5" marker-end="url(#dg)"/>
+  <text x="340" y="115" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">redeploy</text>
+  <!-- MongoDB Atlas -->
+  <rect x="380" y="260" width="160" height="60" rx="5" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="460" y="282" text-anchor="middle" fill="#ffa657" font-size="11" font-family="monospace" font-weight="bold">🍃 MongoDB Atlas</text>
+  <text x="460" y="300" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">M0 Free / M10 Prod</text>
+  <text x="460" y="314" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">TLS + AES-256 at rest</text>
+  <line x1="460" y1="210" x2="460" y2="258" stroke="#ffa657" stroke-width="1.5" marker-end="url(#do)"/>
+  <text x="475" y="238" fill="#8b949e" font-size="9" font-family="monospace">Mongoose + PyMongo TLS</text>
+  <!-- External: Gemini -->
+  <rect x="620" y="130" width="140" height="50" rx="5" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="690" y="152" text-anchor="middle" fill="#f85149" font-size="11" font-family="monospace" font-weight="bold">Gemini Pro</text>
+  <text x="690" y="170" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">LLM Streaming API</text>
+  <line x1="540" y1="165" x2="618" y2="165" stroke="#f85149" stroke-width="1.5" marker-end="url(#da)"/>
+  <text x="578" y="160" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">HTTPS</text>
+  <!-- External: SMTP -->
+  <rect x="620" y="200" width="140" height="50" rx="5" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="690" y="222" text-anchor="middle" fill="#f85149" font-size="11" font-family="monospace" font-weight="bold">Gmail SMTP</text>
+  <text x="690" y="240" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Email Delivery</text>
+  <line x1="540" y1="200" x2="618" y2="220" stroke="#f85149" stroke-width="1.5" marker-end="url(#da)"/>
+  <text x="578" y="208" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">SMTP TLS</text>
+  <!-- React SPA → Backend arrow -->
+  <line x1="460" y1="90" x2="460" y2="128" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#da)"/>
+  <text x="475" y="113" fill="#8b949e" font-size="9" font-family="monospace">HTTPS REST + JWT</text>
+  <!-- Legend -->
+  <rect x="20" y="380" width="12" height="12" rx="2" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="38" y="391" fill="#58a6ff" font-size="10" font-family="monospace">Frontend</text>
+  <rect x="120" y="380" width="12" height="12" rx="2" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="138" y="391" fill="#3fb950" font-size="10" font-family="monospace">Backend Services</text>
+  <rect x="260" y="380" width="12" height="12" rx="2" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="278" y="391" fill="#ffa657" font-size="10" font-family="monospace">Database</text>
+  <rect x="360" y="380" width="12" height="12" rx="2" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="378" y="391" fill="#f85149" font-size="10" font-family="monospace">External APIs</text>
+</svg>

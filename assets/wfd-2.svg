@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="w2a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="w2g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="w2o" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffa657"/>
+    </marker>
+  </defs>
+  <text x="410" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">Teacher / Admin Workflow</text>
+  <rect x="20" y="40" width="130" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="85" y="63" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Teacher Logs In</text>
+  <line x1="150" y1="58" x2="188" y2="58" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w2g)"/>
+  <rect x="190" y="40" width="150" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="265" y="58" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Teacher Dashboard</text>
+  <text x="265" y="70" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Choose action ↓</text>
+  <!-- Three branches -->
+  <line x1="265" y1="76" x2="130" y2="130" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w2g)"/>
+  <line x1="265" y1="76" x2="265" y2="130" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w2g)"/>
+  <line x1="265" y1="76" x2="400" y2="130" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w2g)"/>
+  <!-- Branch 1: View class -->
+  <rect x="40" y="132" width="180" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="130" y="150" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">View Class Mastery</text>
+  <text x="130" y="162" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">GET /api/student/all</text>
+  <line x1="130" y1="168" x2="130" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w2a)"/>
+  <rect x="40" y="202" width="180" height="36" rx="5" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="130" y="220" text-anchor="middle" fill="#f85149" font-size="10" font-family="monospace">Risk Detected?</text>
+  <text x="130" y="232" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">AI risk score shown</text>
+  <!-- Branch 2: Assign topic -->
+  <rect x="185" y="132" width="160" height="36" rx="5" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="265" y="150" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">Assign Topic</text>
+  <text x="265" y="162" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Select student + skill</text>
+  <line x1="265" y1="168" x2="265" y2="200" stroke="#ffa657" stroke-width="1.5" marker-end="url(#w2o)"/>
+  <rect x="185" y="202" width="160" height="36" rx="5" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="265" y="220" text-anchor="middle" fill="#ffa657" font-size="10" font-family="monospace">TopicAssignment Created</text>
+  <text x="265" y="232" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">POST /api/assignments</text>
+  <line x1="265" y1="238" x2="265" y2="258" stroke="#ffa657" stroke-width="1.5" marker-end="url(#w2o)"/>
+  <rect x="185" y="260" width="160" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="265" y="279" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Student Notified</text>
+  <!-- Branch 3: Analytics -->
+  <rect x="360" y="132" width="180" height="36" rx="5" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+  <text x="450" y="150" text-anchor="middle" fill="#d2a8ff" font-size="10" font-family="monospace">View Analytics</text>
+  <text x="450" y="162" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">GET /api/analytics</text>
+  <line x1="450" y1="168" x2="450" y2="200" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#w2a)"/>
+  <rect x="360" y="202" width="180" height="36" rx="5" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+  <text x="450" y="220" text-anchor="middle" fill="#d2a8ff" font-size="10" font-family="monospace">Identify Weak Spots</text>
+  <text x="450" y="232" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Plan intervention</text>
+</svg>

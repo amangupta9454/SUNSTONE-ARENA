@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="w1a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="w1g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+  </defs>
+  <text x="410" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">Student Onboarding Workflow</text>
+  <!-- Column 1: Registration -->
+  <rect x="20" y="40" width="150" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="95" y="63" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Visit EduPath AI</text>
+  <line x1="95" y1="76" x2="95" y2="96" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <rect x="20" y="98" width="150" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="95" y="121" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Register + Set Career Goal</text>
+  <line x1="95" y1="134" x2="95" y2="154" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <rect x="20" y="156" width="150" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="95" y="179" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Diagnostic Assessment</text>
+  <line x1="95" y1="192" x2="95" y2="212" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <rect x="20" y="214" width="150" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="95" y="232" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">BKT Computes Mastery</text>
+  <text x="95" y="244" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Initial scores set</text>
+  <line x1="95" y1="250" x2="95" y2="270" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <rect x="20" y="272" width="150" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="95" y="290" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Knowledge Graph Built</text>
+  <text x="95" y="302" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Mastery overlay applied</text>
+  <line x1="95" y1="308" x2="95" y2="328" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <rect x="20" y="330" width="150" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="95" y="348" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">AI Generates Learning Plan</text>
+  <text x="95" y="360" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Weekly schedule created</text>
+  <!-- Arrow to dashboard -->
+  <line x1="170" y1="348" x2="218" y2="200" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <!-- Dashboard -->
+  <rect x="220" y="156" width="160" height="80" rx="5" fill="#161b22" stroke="#d2a8ff" stroke-width="2"/>
+  <text x="300" y="178" text-anchor="middle" fill="#d2a8ff" font-size="11" font-family="monospace" font-weight="bold">Dashboard</text>
+  <text x="300" y="196" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">Personalised content</text>
+  <text x="300" y="212" text-anchor="middle" fill="#8b949e" font-size="10" font-family="monospace">loaded for student</text>
+  <text x="300" y="228" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Student chooses action ↓</text>
+  <!-- Action branches -->
+  <line x1="380" y1="196" x2="418" y2="120" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <line x1="380" y1="200" x2="418" y2="196" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <line x1="380" y1="210" x2="418" y2="270" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <line x1="380" y1="220" x2="418" y2="340" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#w1a)"/>
+  <!-- Action boxes -->
+  <rect x="420" y="100" width="130" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="485" y="118" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Study Content</text>
+  <text x="485" y="130" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">→ earn XP</text>
+  <rect x="420" y="178" width="130" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="485" y="196" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">SRS Review</text>
+  <text x="485" y="208" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">→ SM-2 updated</text>
+  <rect x="420" y="252" width="130" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="485" y="270" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Take Quiz</text>
+  <text x="485" y="282" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">→ BKT updated</text>
+  <rect x="420" y="322" width="130" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="485" y="340" text-anchor="middle" fill="#58a6ff" font-size="10" font-family="monospace">Ask AI Tutor</text>
+  <text x="485" y="352" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">→ Gemini stream</text>
+  <!-- All → XP -->
+  <line x1="550" y1="118" x2="618" y2="200" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <line x1="550" y1="196" x2="618" y2="210" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <line x1="550" y1="270" x2="618" y2="220" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <line x1="550" y1="340" x2="618" y2="230" stroke="#3fb950" stroke-width="1.5" marker-end="url(#w1g)"/>
+  <rect x="620" y="178" width="160" height="60" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="700" y="200" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">XP Awarded</text>
+  <text x="700" y="216" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Level + Streak updated</text>
+  <text x="700" y="230" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">Notifications generated</text>
+</svg>

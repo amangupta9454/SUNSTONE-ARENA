@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" style="width:100%;max-width:860px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
+  <defs>
+    <marker id="s6a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="s6g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="s6o" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffa657"/>
+    </marker>
+    <marker id="s6p" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d2a8ff"/>
+    </marker>
+  </defs>
+  <text x="430" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">Sequence 6 — Knowledge Graph Fetch</text>
+  <!-- Participants -->
+  <rect x="10" y="36" width="70" height="28" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="45" y="55" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">Student</text>
+  <rect x="100" y="36" width="90" height="28" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="145" y="55" text-anchor="middle" fill="#58a6ff" font-size="9" font-family="monospace">React</text>
+  <rect x="210" y="36" width="100" height="28" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="260" y="55" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">Node.js :5000</text>
+  <rect x="330" y="36" width="110" height="28" rx="4" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+  <text x="385" y="55" text-anchor="middle" fill="#d2a8ff" font-size="9" font-family="monospace">Python :8000</text>
+  <rect x="460" y="36" width="110" height="28" rx="4" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="515" y="55" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">MongoDB Atlas</text>
+  <!-- Lifelines -->
+  <line x1="45" y1="64" x2="45" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="145" y1="64" x2="145" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="260" y1="64" x2="260" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="385" y1="64" x2="385" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="515" y1="64" x2="515" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Messages -->
+  <line x1="45" y1="85" x2="135" y2="85" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s6a)"/>
+  <text x="90" y="80" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">Navigate to Knowledge Graph</text>
+  <line x1="145" y1="105" x2="250" y2="105" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#s6a)"/>
+  <text x="197" y="100" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">GET /api/intelligence/knowledge-graph + JWT</text>
+  <rect x="220" y="113" width="80" height="16" rx="3" fill="#1a2a1a" stroke="#3fb950" stroke-width="1"/>
+  <text x="260" y="125" text-anchor="middle" fill="#3fb950" font-size="8" font-family="monospace">authMiddleware → studentId</text>
+  <line x1="260" y1="131" x2="375" y2="131" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s6a)"/>
+  <text x="317" y="126" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">GET /knowledge-graph/{student_id}</text>
+  <rect x="345" y="139" width="80" height="16" rx="3" fill="#2a1a3a" stroke="#d2a8ff" stroke-width="1"/>
+  <text x="385" y="151" text-anchor="middle" fill="#d2a8ff" font-size="8" font-family="monospace">Load cached NetworkX DAG</text>
+  <line x1="385" y1="157" x2="505" y2="157" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#s6a)"/>
+  <text x="445" y="152" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">StudentMastery.find({ studentId })</text>
+  <line x1="505" y1="177" x2="395" y2="177" stroke="#ffa657" stroke-width="1.5" marker-end="url(#s6o)"/>
+  <text x="445" y="172" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">All mastery scores for student</text>
+  <!-- Loop box -->
+  <rect x="330" y="185" width="200" height="70" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="340" y="198" fill="#8b949e" font-size="8" font-family="monospace">loop: for each skill node</text>
+  <rect x="345" y="203" width="170" height="16" rx="3" fill="#2a1a3a" stroke="#d2a8ff" stroke-width="1"/>
+  <text x="430" y="215" text-anchor="middle" fill="#d2a8ff" font-size="8" font-family="monospace">status: locked/unlocked/in-progress/mastered</text>
+  <rect x="345" y="223" width="170" height="16" rx="3" fill="#2a1a3a" stroke="#d2a8ff" stroke-width="1"/>
+  <text x="430" y="235" text-anchor="middle" fill="#d2a8ff" font-size="8" font-family="monospace">color: grey / blue / yellow / green</text>
+  <rect x="345" y="243" width="170" height="8" rx="2" fill="#161b22"/>
+  <!-- Convert + return -->
+  <rect x="345" y="259" width="80" height="16" rx="3" fill="#2a1a3a" stroke="#d2a8ff" stroke-width="1"/>
+  <text x="385" y="271" text-anchor="middle" fill="#d2a8ff" font-size="8" font-family="monospace">Convert to React Flow format</text>
+  <line x1="375" y1="279" x2="270" y2="279" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#s6p)"/>
+  <text x="322" y="274" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">{ nodes: [...], edges: [...] }</text>
+  <line x1="250" y1="299" x2="155" y2="299" stroke="#3fb950" stroke-width="1.5" marker-end="url(#s6g)"/>
+  <text x="202" y="294" text-anchor="middle" fill="#c9d1d9" font-size="8" font-family="monospace">200 { nodes, edges }</text>
+  <line x1="135" y1="319" x2="55" y2="319" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#s6g)"/>
+  <text x="95" y="314" text-anchor="middle" fill="#3fb950" font-size="8" font-family="monospace">Interactive graph with animated edges</text>
+</svg>

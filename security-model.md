@@ -10,56 +10,7 @@
 
 <h3 style="color:#d2a8ff;">JWT Token Flow</h3>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
-  <defs>
-    <marker id="sa" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
-    </marker>
-    <marker id="sr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
-    </marker>
-  </defs>
-  <!-- Participants -->
-  <rect x="60" y="30" width="120" height="36" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
-  <text x="120" y="53" text-anchor="middle" fill="#58a6ff" font-size="12" font-family="monospace" font-weight="bold">Client</text>
-  <rect x="340" y="30" width="140" height="36" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="410" y="53" text-anchor="middle" fill="#3fb950" font-size="12" font-family="monospace" font-weight="bold">Node.js Backend</text>
-  <rect x="630" y="30" width="120" height="36" rx="5" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
-  <text x="690" y="53" text-anchor="middle" fill="#ffa657" font-size="12" font-family="monospace" font-weight="bold">MongoDB</text>
-  <!-- Lifelines -->
-  <line x1="120" y1="66" x2="120" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="410" y1="66" x2="410" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="690" y1="66" x2="690" y2="330" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
-  <!-- Step 1: Client → Backend login -->
-  <line x1="120" y1="95" x2="400" y2="95" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#sa)"/>
-  <text x="260" y="90" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">POST /api/auth/login { email, password }</text>
-  <!-- Step 2: Backend → DB -->
-  <line x1="410" y1="120" x2="680" y2="120" stroke="#3fb950" stroke-width="1.5" marker-end="url(#sr)"/>
-  <text x="545" y="115" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">Find user by email</text>
-  <!-- Step 3: DB → Backend -->
-  <line x1="680" y1="145" x2="420" y2="145" stroke="#ffa657" stroke-width="1.5" marker-end="url(#sa)"/>
-  <text x="545" y="140" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">User document returned</text>
-  <!-- Step 4: Backend internal -->
-  <rect x="350" y="158" width="120" height="22" rx="3" fill="#1a2a1a" stroke="#3fb950" stroke-width="1"/>
-  <text x="410" y="173" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">bcrypt.compare(password, hash)</text>
-  <rect x="330" y="188" width="160" height="22" rx="3" fill="#1a2a1a" stroke="#3fb950" stroke-width="1"/>
-  <text x="410" y="203" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">jwt.sign({ id, role }, secret, 7d)</text>
-  <!-- Step 5: Backend → Client token -->
-  <line x1="400" y1="225" x2="130" y2="225" stroke="#3fb950" stroke-width="1.5" marker-end="url(#sr)"/>
-  <text x="260" y="220" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">{ token: "eyJ..." } → stored in localStorage</text>
-  <!-- Divider -->
-  <line x1="60" y1="245" x2="760" y2="245" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="410" y="258" text-anchor="middle" fill="#8b949e" font-size="9" font-family="monospace">— subsequent authenticated request —</text>
-  <!-- Step 6: Client → Backend with token -->
-  <line x1="120" y1="272" x2="400" y2="272" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#sa)"/>
-  <text x="260" y="267" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">GET /api/student/profile  Authorization: Bearer eyJ...</text>
-  <!-- Step 7: Backend verify -->
-  <rect x="340" y="283" width="140" height="22" rx="3" fill="#1a2a1a" stroke="#3fb950" stroke-width="1"/>
-  <text x="410" y="298" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">jwt.verify → attach req.user</text>
-  <!-- Step 8: Backend → Client resource -->
-  <line x1="400" y1="318" x2="130" y2="318" stroke="#3fb950" stroke-width="1.5" marker-end="url(#sr)"/>
-  <text x="260" y="313" text-anchor="middle" fill="#c9d1d9" font-size="10" font-family="monospace">Protected resource returned</text>
-</svg>
+![security-model diagram](assets/security-model.svg)
 
 <table style="border-collapse:collapse;width:100%;">
 <tr style="background:#161b22;"><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Property</th><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Value</th><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Rationale</th></tr>

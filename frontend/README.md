@@ -17,50 +17,7 @@
 <!-- Component Architecture SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🏗️ Component Architecture</h2>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 260" style="width:100%;max-width:820px;background:#0d1117;border:1px solid #30363d;border-radius:8px;display:block;margin:16px 0;">
-  <defs>
-    <marker id="fea" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
-    </marker>
-  </defs>
-  <text x="410" y="22" text-anchor="middle" fill="#58a6ff" font-size="13" font-family="monospace" font-weight="bold">React App — Component Tree</text>
-  <!-- App.jsx -->
-  <rect x="340" y="36" width="140" height="36" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
-  <text x="410" y="58" text-anchor="middle" fill="#58a6ff" font-size="11" font-family="monospace" font-weight="bold">App.jsx (Router)</text>
-  <!-- Layout -->
-  <line x1="410" y1="72" x2="410" y2="90" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <rect x="310" y="90" width="200" height="32" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="410" y="110" text-anchor="middle" fill="#3fb950" font-size="10" font-family="monospace">Layout.jsx (Navbar + Sidebar)</text>
-  <!-- Pages row -->
-  <line x1="250" y1="122" x2="250" y2="142" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <line x1="410" y1="122" x2="410" y2="142" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <line x1="570" y1="122" x2="570" y2="142" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <line x1="310" y1="106" x2="250" y2="106" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="510" y1="106" x2="570" y2="106" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,3"/>
-  <!-- Page boxes -->
-  <rect x="160" y="142" width="180" height="32" rx="6" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
-  <text x="250" y="162" text-anchor="middle" fill="#d2a8ff" font-size="9" font-family="monospace">Dashboard.jsx (main hub)</text>
-  <rect x="320" y="142" width="180" height="32" rx="6" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
-  <text x="410" y="162" text-anchor="middle" fill="#d2a8ff" font-size="9" font-family="monospace">Assessment / Quiz / Exam</text>
-  <rect x="480" y="142" width="180" height="32" rx="6" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
-  <text x="570" y="162" text-anchor="middle" fill="#d2a8ff" font-size="9" font-family="monospace">Tutor / LearningPlan / SRS</text>
-  <!-- Components row -->
-  <line x1="250" y1="174" x2="250" y2="194" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <line x1="410" y1="174" x2="410" y2="194" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <line x1="570" y1="174" x2="570" y2="194" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#fea)"/>
-  <rect x="100" y="194" width="300" height="32" rx="6" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
-  <text x="250" y="214" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">AI Components: BurnoutAlert, SkillHeatmap, RiskCard</text>
-  <rect x="420" y="194" width="300" height="32" rx="6" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
-  <text x="570" y="214" text-anchor="middle" fill="#ffa657" font-size="9" font-family="monospace">Intelligence: CogLoad, OptStudyTime, SmartBreak</text>
-  <!-- Zustand -->
-  <rect x="20" y="142" width="120" height="32" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="80" y="162" text-anchor="middle" fill="#3fb950" font-size="9" font-family="monospace">Zustand Store</text>
-  <line x1="140" y1="158" x2="160" y2="158" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#fea)"/>
-  <!-- API -->
-  <rect x="20" y="194" width="120" height="32" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
-  <text x="80" y="214" text-anchor="middle" fill="#58a6ff" font-size="9" font-family="monospace">services/api.js</text>
-  <text x="80" y="240" text-anchor="middle" fill="#8b949e" font-size="8" font-family="monospace">All axios calls</text>
-</svg>
+![frontend-README diagram](../assets/frontend-README.svg)
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
