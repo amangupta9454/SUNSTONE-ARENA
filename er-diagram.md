@@ -111,6 +111,6 @@
 
 <h2 style="color:#79c0ff;">4. ER Diagram</h2>
 
-![er-diagram diagram](assets/er-diagram.svg)
+<img src="assets/er-diagram.svg" width="100%" alt="er-diagram diagram">
 
 </body>

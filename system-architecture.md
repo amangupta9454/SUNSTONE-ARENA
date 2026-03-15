@@ -66,7 +66,7 @@
 
 <h2 style="color:#79c0ff;">3. Architecture Diagram</h2>
 
-![system-architecture diagram](assets/system-architecture.svg)
+<img src="assets/system-architecture.svg" width="100%" alt="system-architecture diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

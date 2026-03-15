@@ -17,7 +17,7 @@
 <!-- Component Architecture SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🏗️ Component Architecture</h2>
 
-![frontend-README diagram](../assets/frontend-README.svg)
+<img src="../assets/frontend-README.svg" width="100%" alt="frontend-README diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

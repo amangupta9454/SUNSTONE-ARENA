@@ -17,7 +17,7 @@
 <!-- AI Service Architecture SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🏗️ Service Architecture</h2>
 
-![ai-service-README diagram](../assets/ai-service-README.svg)
+<img src="../assets/ai-service-README.svg" width="100%" alt="ai-service-README diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

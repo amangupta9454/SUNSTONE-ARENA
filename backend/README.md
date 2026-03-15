@@ -17,7 +17,7 @@
 <!-- Request Flow SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🔄 Request Flow</h2>
 
-![backend-README diagram](../assets/backend-README.svg)
+<img src="../assets/backend-README.svg" width="100%" alt="backend-README diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

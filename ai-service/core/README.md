@@ -16,14 +16,14 @@
 <!-- BKT Flow SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">📐 BKT Update Flow</h2>
 
-![ai-service-core-README diagram](../../assets/ai-service-core-README-1.svg)
+<img src="../../assets/ai-service-core-README-1.svg" width="100%" alt="ai-service-core-README diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
 <!-- Knowledge Graph SVG -->
 <h2 style="color:#79c0ff;font-size:1.5em;">🕸️ Knowledge Graph Structure</h2>
 
-![ai-service-core-README diagram](../../assets/ai-service-core-README-2.svg)
+<img src="../../assets/ai-service-core-README-2.svg" width="100%" alt="ai-service-core-README diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

@@ -20,7 +20,7 @@
 
 <h2 style="color:#79c0ff;">2. Infrastructure Diagram</h2>
 
-![devops-architecture diagram](assets/devops-architecture-1.svg)
+<img src="assets/devops-architecture-1.svg" width="100%" alt="devops-architecture diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
@@ -72,7 +72,7 @@
 
 <h2 style="color:#79c0ff;">4. Pipeline Overview</h2>
 
-![devops-architecture diagram](assets/devops-architecture-2.svg)
+<img src="assets/devops-architecture-2.svg" width="100%" alt="devops-architecture diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

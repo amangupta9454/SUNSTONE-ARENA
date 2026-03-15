@@ -735,23 +735,22 @@ new_mastery = p_learned_given_obs + (1 - p_learned_given_obs) * p_transit</pre>
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
-<h2 style="font-size:1.5em;color:#79c0ff;border-bottom:1px solid #21262d;padding-bottom:6px;">🗺️ System Architecture Diagram</h2>
-![README diagram](assets/README-1.svg)
+<img src="assets/README-1.svg" width="100%" alt="System Architecture Diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
 <h2 style="font-size:1.5em;color:#79c0ff;border-bottom:1px solid #21262d;padding-bottom:6px;">🔄 Data Flow Diagram</h2>
-![README diagram](assets/README-2.svg)
+<img src="assets/README-2.svg" width="100%" alt="Data Flow Diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
 <h2 style="font-size:1.5em;color:#79c0ff;border-bottom:1px solid #21262d;padding-bottom:6px;">👤 User Flow Diagram</h2>
-![README diagram](assets/README-3.svg)
+<img src="assets/README-3.svg" width="100%" alt="User Flow Diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 
 <h2 style="font-size:1.5em;color:#79c0ff;border-bottom:1px solid #21262d;padding-bottom:6px;">🏗️ Framework Architecture Diagram</h2>
-![README diagram](assets/README-4.svg)
+<img src="assets/README-4.svg" width="100%" alt="Framework Architecture Diagram">
 
 <hr style="border:none;border-top:1px solid #21262d;margin:32px 0;">
 

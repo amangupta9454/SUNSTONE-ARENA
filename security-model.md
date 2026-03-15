@@ -10,7 +10,7 @@
 
 <h3 style="color:#d2a8ff;">JWT Token Flow</h3>
 
-![security-model diagram](assets/security-model.svg)
+<img src="assets/security-model.svg" width="100%" alt="security-model diagram">
 
 <table style="border-collapse:collapse;width:100%;">
 <tr style="background:#161b22;"><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Property</th><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Value</th><th style="border:1px solid #30363d;padding:10px;color:#79c0ff;">Rationale</th></tr>
