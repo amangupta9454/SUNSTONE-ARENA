@@ -70,6 +70,11 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.use((req, res) => {
+  console.log("API IS RUNNING");
+  res.status(404).json({ success: false, message: 'Endpoint not found' });
+}
+);
 // ─── Database + Server Start ──────────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 
