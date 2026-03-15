@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Proxy /api calls to the Node backend during development
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://sunstone-arena.vercel.app',
         changeOrigin: true,
       },
     },

@@ -13,44 +13,51 @@ const generateToken = (user) => {
 
 // ─── REGISTER ─────────────────────────────────────────────────────────────────
 // POST /api/auth/register
-// Body: { name, email, password, role? }
+// Body: { name, email, password, role?, career_goal? }
 const register = async (req, res) => {
-  const { name, email, password, role } = req.body;
+  try {
+    const { name, email, password, role, career_goal } = req.body;
 
-  if (!name || !email || !password) {
-    return res.status(400).json({ success: false, message: 'Name, email, and password are required.' });
+    if (!name || !email || !password) {
+      return res.status(400).json({ success: false, message: 'Name, email, and password are required.' });
+    }
+
+    // Check if email already exists
+    const existing = await Student.findOne({ email });
+    if (existing) {
+      return res.status(409).json({ success: false, message: 'Email already registered.' });
+    }
+
+    // Hash the password (10 salt rounds is the standard)
+    const password_hash = await bcrypt.hash(password, 10);
+
+    const student = await Student.create({
+      name,
+      email,
+      password_hash,
+      role: role || 'student',
+      career_goal: career_goal || '',
+    });
+
+    const token = generateToken(student);
+
+    console.log(`✅ New user registered: ${email} (${student.role})`);
+
+    res.status(201).json({
+      success: true,
+      token,
+      user: {
+        id: student._id,
+        name: student.name,
+        email: student.email,
+        role: student.role,
+        career_goal: student.career_goal,
+      },
+    });
+  } catch (err) {
+    console.error('❌ Registration error:', err.message);
+    res.status(500).json({ success: false, message: err.message || 'Registration failed.' });
   }
-
-  // Check if email already exists
-  const existing = await Student.findOne({ email });
-  if (existing) {
-    return res.status(409).json({ success: false, message: 'Email already registered.' });
-  }
-
-  // Hash the password (10 salt rounds is the standard)
-  const password_hash = await bcrypt.hash(password, 10);
-
-  const student = await Student.create({
-    name,
-    email,
-    password_hash,
-    role: role || 'student',
-  });
-
-  const token = generateToken(student);
-
-  console.log(`✅ New user registered: ${email} (${student.role})`);
-
-  res.status(201).json({
-    success: true,
-    token,
-    user: {
-      id: student._id,
-      name: student.name,
-      email: student.email,
-      role: student.role,
-    },
-  });
 };
 
 // ─── LOGIN ────────────────────────────────────────────────────────────────────

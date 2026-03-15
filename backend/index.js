@@ -28,23 +28,9 @@ const intelligenceRoutes  = require('./routes/intelligenceRoutes');
 const app = express();
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
-const ALLOWED_ORIGINS = [
-  process.env.FRONTEND_URL,        // https://edupath-ai.netlify.app  (set in Vercel dashboard)
-  'http://localhost:5173',          // Vite local dev
-  'http://localhost:3000',          // CRA / other local dev
-].filter(Boolean);
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      // Allow Postman / curl / server-to-server (no origin header)
-      if (!origin) return callback(null, true);
-      if (ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
-      callback(new Error(`CORS: origin "${origin}" not allowed`));
-    },
-    credentials: true,
-  })
-);
+
+app.use(cors("*"));
 
 // ─── Body + Logging ───────────────────────────────────────────────────────────
 app.use(express.json());

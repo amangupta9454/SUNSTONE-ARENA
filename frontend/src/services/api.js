@@ -2,8 +2,10 @@ import axios from 'axios'
 import { getToken, logout } from './auth'
 
 // Base axios instance
+// LOCAL DEV: VITE_API_URL should be empty → baseURL is undefined → requests use relative paths → Vite proxy forwards to localhost:5000
+// PRODUCTION: VITE_API_URL = 'https://sunstone-arena.vercel.app' (set in Netlify dashboard)
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
+  baseURL: import.meta.env.VITE_API_URL || undefined,
   headers: { 'Content-Type': 'application/json' },
 })
 
@@ -64,8 +66,9 @@ export const toggleTodo = (id) => api.patch(`/api/todo/${id}/toggle`)
 // Returns a ReadableStream so the UI can render text word-by-word as it arrives
 export const queryTutor = async (question, topic, masteryScore) => {
   const token = getToken()
+  const baseUrl = import.meta.env.VITE_API_URL || ''
   const response = await fetch(
-    `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/tutor/query`,
+    `${baseUrl}/api/tutor/query`,
     {
       method: 'POST',
       headers: {
